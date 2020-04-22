@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Principal": {
+                "AWS": "arn:aws:iam::053235628059:role/Cognito_S3DirectUploadUnauth_Role"
+            },
+            "Resource": "arn:aws:s3:::sgdirectuploadbucket"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Principal": {
+                "AWS": "arn:aws:iam::053235628059:role/Cognito_S3DirectUploadUnauth_Role"
+            },
+            "Resource": "arn:aws:s3:::sgdirectuploadbucket/*"
+        }
+    ]
+}

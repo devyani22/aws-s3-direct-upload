@@ -1,0 +1,8 @@
+//arn:aws:iam::053235628059:role/Cognito_S3DirectUploadUnauth_Role
+
+
+// Initialize the Amazon Cognito credentials provider
+AWS.config.region = 'us-east-2'; // Region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-east-2:91a70fc2-a3c9-4e9b-b033-5b0ae111b8c4',
+});
